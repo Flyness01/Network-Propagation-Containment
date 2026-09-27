@@ -1,0 +1,54 @@
+{
+  "configuration": {
+    "trials": 200,
+    "nodes": 120,
+    "split_hubs": 3,
+    "replicas_per_hub": 3,
+    "transmission": 0.16,
+    "recovery": 0.2,
+    "seed": 7
+  },
+  "topology": {
+    "baseline_nodes": 120,
+    "intervention_nodes": 126,
+    "baseline_edges": 237,
+    "intervention_edges": 237,
+    "split_nodes": [
+      0,
+      1,
+      10
+    ]
+  },
+  "baseline": {
+    "ever_infected": {
+      "mean": 63.99,
+      "stdev": 42.63753860734062
+    },
+    "peak_infected": {
+      "mean": 27.13,
+      "stdev": 18.46722208284956
+    },
+    "duration": {
+      "mean": 25.465,
+      "stdev": 15.093969477008502
+    },
+    "infected_fraction": 0.53325
+  },
+  "intervention": {
+    "ever_infected": {
+      "mean": 64.165,
+      "stdev": 45.642347600362996
+    },
+    "peak_infected": {
+      "mean": 21.49,
+      "stdev": 15.78784915384368
+    },
+    "duration": {
+      "mean": 27.07,
+      "stdev": 16.499584279824603
+    },
+    "infected_fraction": 0.5092460317460318
+  },
+  "relative_change_ever_infected_percent": 0.2734802312861451,
+  "relative_change_infected_fraction_percent": -4.5014473987751
+}
