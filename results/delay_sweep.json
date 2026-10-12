@@ -1,0 +1,1119 @@
+{
+  "question": "How does intervention delay change the containment benefit of topology restructuring?",
+  "configuration": {
+    "trials": 200,
+    "nodes": 120,
+    "delays": [
+      0,
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "interventions": [
+      "split",
+      "quarantine",
+      "rate_limit"
+    ],
+    "split_hubs": 3,
+    "replicas_per_hub": 3,
+    "transmission": 0.16,
+    "recovery": 0.2,
+    "steps": 40,
+    "seed": 7
+  },
+  "measurement_note": "Virtual replicas are counted as their original logical node. Delay is measured in simulation steps, not wall-clock controller time.",
+  "baseline": {
+    "ever_infected": {
+      "mean": 63.99,
+      "stdev": 42.63753860734062
+    },
+    "infected_fraction": {
+      "mean": 0.53325,
+      "stdev": 0.35531282172783857
+    },
+    "peak_infected": {
+      "mean": 27.13,
+      "stdev": 18.46722208284956
+    },
+    "duration": {
+      "mean": 25.465,
+      "stdev": 15.093969477008502
+    }
+  },
+  "comparisons": [
+    {
+      "intervention": "split",
+      "delay_steps": 0,
+      "results": {
+        "ever_infected": {
+          "mean": 60.595,
+          "stdev": 43.04188651737833
+        },
+        "infected_fraction": {
+          "mean": 0.5049583333333333,
+          "stdev": 0.3586823876448194
+        },
+        "peak_infected": {
+          "mean": 21.025,
+          "stdev": 15.391845880140236
+        },
+        "duration": {
+          "mean": 27.07,
+          "stdev": 16.499584279824603
+        }
+      },
+      "relative_change_infected_fraction_percent": -5.305516486951095,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.02829166666666667,
+          "stdev": 0.2142874417487734,
+          "approximate_95_percent_ci": [
+            -0.05799039089066696,
+            0.00140705755733362
+          ]
+        },
+        "peak_infected": {
+          "mean": -6.105,
+          "stdev": 12.9173629790162,
+          "approximate_95_percent_ci": [
+            -7.8952551716720425,
+            -4.314744828327958
+          ]
+        },
+        "duration": {
+          "mean": 1.605,
+          "stdev": 8.272311082960211,
+          "approximate_95_percent_ci": [
+            0.45851617648222365,
+            2.751483823517776
+          ]
+        }
+      },
+      "intervention_application_rate": 1,
+      "mean_disrupted_edges": 0
+    },
+    {
+      "intervention": "split",
+      "delay_steps": 2,
+      "results": {
+        "ever_infected": {
+          "mean": 61.775,
+          "stdev": 42.656562055938835
+        },
+        "infected_fraction": {
+          "mean": 0.5147916666666666,
+          "stdev": 0.35547135046615697
+        },
+        "peak_infected": {
+          "mean": 22.41,
+          "stdev": 16.122393054039613
+        },
+        "duration": {
+          "mean": 26.505,
+          "stdev": 16.197585743548263
+        }
+      },
+      "relative_change_infected_fraction_percent": -3.461478355993128,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.018458333333333334,
+          "stdev": 0.19718474598916014,
+          "approximate_95_percent_ci": [
+            -0.04578674485628781,
+            0.008870078189621138
+          ]
+        },
+        "peak_infected": {
+          "mean": -4.72,
+          "stdev": 12.154019952469435,
+          "approximate_95_percent_ci": [
+            -6.404461225705276,
+            -3.0355387742947233
+          ]
+        },
+        "duration": {
+          "mean": 1.04,
+          "stdev": 8.207019914646057,
+          "approximate_95_percent_ci": [
+            -0.09743492925593622,
+            2.177434929255936
+          ]
+        }
+      },
+      "intervention_application_rate": 0.895,
+      "mean_disrupted_edges": 0
+    },
+    {
+      "intervention": "split",
+      "delay_steps": 4,
+      "results": {
+        "ever_infected": {
+          "mean": 65.36,
+          "stdev": 42.38102353387533
+        },
+        "infected_fraction": {
+          "mean": 0.5446666666666666,
+          "stdev": 0.35317519611562775
+        },
+        "peak_infected": {
+          "mean": 24.825,
+          "stdev": 16.740237536063194
+        },
+        "duration": {
+          "mean": 26.77,
+          "stdev": 15.785531827448098
+        }
+      },
+      "relative_change_infected_fraction_percent": 2.140959524925763,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": 0.011416666666666664,
+          "stdev": 0.1498191493054347,
+          "approximate_95_percent_ci": [
+            -0.009347208072725986,
+            0.03218054140605931
+          ]
+        },
+        "peak_infected": {
+          "mean": -2.305,
+          "stdev": 10.260524686105036,
+          "approximate_95_percent_ci": [
+            -3.727036170479061,
+            -0.882963829520939
+          ]
+        },
+        "duration": {
+          "mean": 1.305,
+          "stdev": 6.187357429452334,
+          "approximate_95_percent_ci": [
+            0.44747601038582074,
+            2.1625239896141792
+          ]
+        }
+      },
+      "intervention_application_rate": 0.8,
+      "mean_disrupted_edges": 0
+    },
+    {
+      "intervention": "split",
+      "delay_steps": 6,
+      "results": {
+        "ever_infected": {
+          "mean": 64.49,
+          "stdev": 41.90417280525249
+        },
+        "infected_fraction": {
+          "mean": 0.5374166666666667,
+          "stdev": 0.34920144004377074
+        },
+        "peak_infected": {
+          "mean": 25.595,
+          "stdev": 17.07420914978062
+        },
+        "duration": {
+          "mean": 26.11,
+          "stdev": 15.439878537288795
+        }
+      },
+      "relative_change_infected_fraction_percent": 0.7813720893889643,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": 0.004166666666666664,
+          "stdev": 0.12968468826205315,
+          "approximate_95_percent_ci": [
+            -0.013806714140620938,
+            0.022140047473954268
+          ]
+        },
+        "peak_infected": {
+          "mean": -1.535,
+          "stdev": 9.276802808713722,
+          "approximate_95_percent_ci": [
+            -2.820699274059289,
+            -0.24930072594071095
+          ]
+        },
+        "duration": {
+          "mean": 0.645,
+          "stdev": 5.481716985172405,
+          "approximate_95_percent_ci": [
+            -0.11472721354113324,
+            1.4047272135411333
+          ]
+        }
+      },
+      "intervention_application_rate": 0.765,
+      "mean_disrupted_edges": 0
+    },
+    {
+      "intervention": "split",
+      "delay_steps": 8,
+      "results": {
+        "ever_infected": {
+          "mean": 64.235,
+          "stdev": 42.75499647547746
+        },
+        "infected_fraction": {
+          "mean": 0.5352916666666667,
+          "stdev": 0.35629163729564556
+        },
+        "peak_infected": {
+          "mean": 26.53,
+          "stdev": 18.101031370709713
+        },
+        "duration": {
+          "mean": 26.145,
+          "stdev": 15.562936740859676
+        }
+      },
+      "relative_change_infected_fraction_percent": 0.3828723238006037,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": 0.0020416666666666643,
+          "stdev": 0.09847560010633975,
+          "approximate_95_percent_ci": [
+            -0.011606355198188414,
+            0.015689688531521744
+          ]
+        },
+        "peak_infected": {
+          "mean": -0.6,
+          "stdev": 6.195313514886772,
+          "approximate_95_percent_ci": [
+            -1.4586266467988078,
+            0.25862664679880787
+          ]
+        },
+        "duration": {
+          "mean": 0.68,
+          "stdev": 4.557571424172326,
+          "approximate_95_percent_ci": [
+            0.04835282668424068,
+            1.3116471733157593
+          ]
+        }
+      },
+      "intervention_application_rate": 0.745,
+      "mean_disrupted_edges": 0
+    },
+    {
+      "intervention": "split",
+      "delay_steps": 10,
+      "results": {
+        "ever_infected": {
+          "mean": 64.195,
+          "stdev": 42.63184662589305
+        },
+        "infected_fraction": {
+          "mean": 0.5349583333333333,
+          "stdev": 0.3552653885491087
+        },
+        "peak_infected": {
+          "mean": 26.985,
+          "stdev": 18.450389136722357
+        },
+        "duration": {
+          "mean": 25.645,
+          "stdev": 15.270721978634269
+        }
+      },
+      "relative_change_infected_fraction_percent": 0.32036255664947244,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": 0.00170833333333333,
+          "stdev": 0.0847875522709584,
+          "approximate_95_percent_ci": [
+            -0.010042621888183365,
+            0.013459288554850023
+          ]
+        },
+        "peak_infected": {
+          "mean": -0.145,
+          "stdev": 4.824974288472645,
+          "approximate_95_percent_ci": [
+            -0.81370731953223,
+            0.5237073195322299
+          ]
+        },
+        "duration": {
+          "mean": 0.18,
+          "stdev": 4.4016442793357395,
+          "approximate_95_percent_ci": [
+            -0.4300367735846979,
+            0.7900367735846978
+          ]
+        }
+      },
+      "intervention_application_rate": 0.72,
+      "mean_disrupted_edges": 0
+    },
+    {
+      "intervention": "split",
+      "delay_steps": 12,
+      "results": {
+        "ever_infected": {
+          "mean": 64.92,
+          "stdev": 42.84227940390909
+        },
+        "infected_fraction": {
+          "mean": 0.541,
+          "stdev": 0.3570189950325758
+        },
+        "peak_infected": {
+          "mean": 27.595,
+          "stdev": 18.578665426914444
+        },
+        "duration": {
+          "mean": 25.585,
+          "stdev": 15.157556949037552
+        }
+      },
+      "relative_change_infected_fraction_percent": 1.4533520862634852,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": 0.0077499999999999965,
+          "stdev": 0.06652786010189699,
+          "approximate_95_percent_ci": [
+            -0.0014702909991127413,
+            0.016970290999112736
+          ]
+        },
+        "peak_infected": {
+          "mean": 0.465,
+          "stdev": 4.49553379707049,
+          "approximate_95_percent_ci": [
+            -0.15804919686052282,
+            1.0880491968605228
+          ]
+        },
+        "duration": {
+          "mean": 0.12,
+          "stdev": 3.166343102573706,
+          "approximate_95_percent_ci": [
+            -0.3188327651610514,
+            0.5588327651610514
+          ]
+        }
+      },
+      "intervention_application_rate": 0.7,
+      "mean_disrupted_edges": 0
+    },
+    {
+      "intervention": "quarantine",
+      "delay_steps": 0,
+      "results": {
+        "ever_infected": {
+          "mean": 22.215,
+          "stdev": 25.510442733167356
+        },
+        "infected_fraction": {
+          "mean": 0.185125,
+          "stdev": 0.21258702277639463
+        },
+        "peak_infected": {
+          "mean": 7.175,
+          "stdev": 7.123771162656016
+        },
+        "duration": {
+          "mean": 19.145,
+          "stdev": 16.152040647714678
+        }
+      },
+      "relative_change_infected_fraction_percent": -65.2836380684482,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.348125,
+          "stdev": 0.3541553969041517,
+          "approximate_95_percent_ci": [
+            -0.39720843381796883,
+            -0.2990415661820312
+          ]
+        },
+        "peak_infected": {
+          "mean": -19.955,
+          "stdev": 17.986398406523495,
+          "approximate_95_percent_ci": [
+            -22.44778763934563,
+            -17.462212360654366
+          ]
+        },
+        "duration": {
+          "mean": -6.32,
+          "stdev": 18.18933366829259,
+          "approximate_95_percent_ci": [
+            -8.840913031694436,
+            -3.799086968305564
+          ]
+        }
+      },
+      "intervention_application_rate": 1,
+      "mean_disrupted_edges": 83
+    },
+    {
+      "intervention": "quarantine",
+      "delay_steps": 2,
+      "results": {
+        "ever_infected": {
+          "mean": 24.58,
+          "stdev": 25.99775019257199
+        },
+        "infected_fraction": {
+          "mean": 0.20483333333333334,
+          "stdev": 0.21664791827143323
+        },
+        "peak_infected": {
+          "mean": 7.975,
+          "stdev": 7.295925413420217
+        },
+        "duration": {
+          "mean": 20.805,
+          "stdev": 15.989537251200789
+        }
+      },
+      "relative_change_infected_fraction_percent": -61.58774808563838,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.3284166666666667,
+          "stdev": 0.3079479346996212,
+          "approximate_95_percent_ci": [
+            -0.37109607295085156,
+            -0.2857372603824818
+          ]
+        },
+        "peak_infected": {
+          "mean": -19.155,
+          "stdev": 16.079918966519987,
+          "approximate_95_percent_ci": [
+            -21.383563069462667,
+            -16.926436930537335
+          ]
+        },
+        "duration": {
+          "mean": -4.66,
+          "stdev": 14.485286244597988,
+          "approximate_95_percent_ci": [
+            -6.667558249672758,
+            -2.6524417503272426
+          ]
+        }
+      },
+      "intervention_application_rate": 0.895,
+      "mean_disrupted_edges": 74.285
+    },
+    {
+      "intervention": "quarantine",
+      "delay_steps": 4,
+      "results": {
+        "ever_infected": {
+          "mean": 32.07,
+          "stdev": 31.850232125247704
+        },
+        "infected_fraction": {
+          "mean": 0.26725,
+          "stdev": 0.2654186010437309
+        },
+        "peak_infected": {
+          "mean": 11.405,
+          "stdev": 11.255862793947912
+        },
+        "duration": {
+          "mean": 22.165,
+          "stdev": 15.357311289748973
+        }
+      },
+      "relative_change_infected_fraction_percent": -49.88279418659166,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.266,
+          "stdev": 0.2836119922430178,
+          "approximate_95_percent_ci": [
+            -0.30530661673640946,
+            -0.2266933832635906
+          ]
+        },
+        "peak_infected": {
+          "mean": -15.725,
+          "stdev": 15.08599720130522,
+          "approximate_95_percent_ci": [
+            -17.815812540712823,
+            -13.634187459287176
+          ]
+        },
+        "duration": {
+          "mean": -3.3,
+          "stdev": 11.614407964326423,
+          "approximate_95_percent_ci": [
+            -4.909674819684282,
+            -1.6903251803157173
+          ]
+        }
+      },
+      "intervention_application_rate": 0.8,
+      "mean_disrupted_edges": 66.4
+    },
+    {
+      "intervention": "quarantine",
+      "delay_steps": 6,
+      "results": {
+        "ever_infected": {
+          "mean": 44.3,
+          "stdev": 35.359886991338094
+        },
+        "infected_fraction": {
+          "mean": 0.36916666666666664,
+          "stdev": 0.29466572492781745
+        },
+        "peak_infected": {
+          "mean": 16.535,
+          "stdev": 13.84366317310022
+        },
+        "duration": {
+          "mean": 24.085,
+          "stdev": 14.932941394563475
+        }
+      },
+      "relative_change_infected_fraction_percent": -30.770432880137523,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.16408333333333333,
+          "stdev": 0.2265054327279511,
+          "approximate_95_percent_ci": [
+            -0.19547538471500875,
+            -0.1326912819516579
+          ]
+        },
+        "peak_infected": {
+          "mean": -10.595,
+          "stdev": 12.54423229293429,
+          "approximate_95_percent_ci": [
+            -12.33354189694617,
+            -8.856458103053832
+          ]
+        },
+        "duration": {
+          "mean": -1.38,
+          "stdev": 8.59096171075031,
+          "approximate_95_percent_ci": [
+            -2.5706465473867635,
+            -0.18935345261323655
+          ]
+        }
+      },
+      "intervention_application_rate": 0.765,
+      "mean_disrupted_edges": 63.495
+    },
+    {
+      "intervention": "quarantine",
+      "delay_steps": 8,
+      "results": {
+        "ever_infected": {
+          "mean": 50.5,
+          "stdev": 37.80670223212204
+        },
+        "infected_fraction": {
+          "mean": 0.42083333333333334,
+          "stdev": 0.3150558519343503
+        },
+        "peak_infected": {
+          "mean": 20.12,
+          "stdev": 16.26864913641013
+        },
+        "duration": {
+          "mean": 24.625,
+          "stdev": 14.98087138779612
+        }
+      },
+      "relative_change_infected_fraction_percent": -21.08141897171433,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.11241666666666666,
+          "stdev": 0.19295772659991195,
+          "approximate_95_percent_ci": [
+            -0.13915924319104964,
+            -0.0856740901422837
+          ]
+        },
+        "peak_infected": {
+          "mean": -7.01,
+          "stdev": 11.200318552540903,
+          "approximate_95_percent_ci": [
+            -8.562284955190428,
+            -5.457715044809571
+          ]
+        },
+        "duration": {
+          "mean": -0.84,
+          "stdev": 7.147013291926556,
+          "approximate_95_percent_ci": [
+            -1.830525506534525,
+            0.150525506534525
+          ]
+        }
+      },
+      "intervention_application_rate": 0.745,
+      "mean_disrupted_edges": 61.835
+    },
+    {
+      "intervention": "quarantine",
+      "delay_steps": 10,
+      "results": {
+        "ever_infected": {
+          "mean": 56.245,
+          "stdev": 40.30555375275947
+        },
+        "infected_fraction": {
+          "mean": 0.46870833333333334,
+          "stdev": 0.3358796146063289
+        },
+        "peak_infected": {
+          "mean": 23.28,
+          "stdev": 17.523612211088874
+        },
+        "duration": {
+          "mean": 25.43,
+          "stdev": 15.366383069649672
+        }
+      },
+      "relative_change_infected_fraction_percent": -12.103453664635099,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.06454166666666668,
+          "stdev": 0.13983568341330915,
+          "approximate_95_percent_ci": [
+            -0.08392190362537427,
+            -0.04516142970795908
+          ]
+        },
+        "peak_infected": {
+          "mean": -3.85,
+          "stdev": 7.8661861420964705,
+          "approximate_95_percent_ci": [
+            -4.940197778377804,
+            -2.759802221622196
+          ]
+        },
+        "duration": {
+          "mean": -0.035,
+          "stdev": 4.93818828292198,
+          "approximate_95_percent_ci": [
+            -0.7193979786394967,
+            0.6493979786394967
+          ]
+        }
+      },
+      "intervention_application_rate": 0.72,
+      "mean_disrupted_edges": 59.76
+    },
+    {
+      "intervention": "quarantine",
+      "delay_steps": 12,
+      "results": {
+        "ever_infected": {
+          "mean": 59.1,
+          "stdev": 40.93664672669381
+        },
+        "infected_fraction": {
+          "mean": 0.4925,
+          "stdev": 0.3411387227224484
+        },
+        "peak_infected": {
+          "mean": 25.045,
+          "stdev": 18.167920676526048
+        },
+        "duration": {
+          "mean": 25.185,
+          "stdev": 15.008901044139234
+        }
+      },
+      "relative_change_infected_fraction_percent": -7.6418190342241,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.04075,
+          "stdev": 0.10198610469064931,
+          "approximate_95_percent_ci": [
+            -0.05488455297785762,
+            -0.026615447022142382
+          ]
+        },
+        "peak_infected": {
+          "mean": -2.085,
+          "stdev": 5.84109294859882,
+          "approximate_95_percent_ci": [
+            -2.8945341809650498,
+            -1.2754658190349502
+          ]
+        },
+        "duration": {
+          "mean": -0.28,
+          "stdev": 3.1402077196601286,
+          "approximate_95_percent_ci": [
+            -0.7152105858895803,
+            0.15521058588958025
+          ]
+        }
+      },
+      "intervention_application_rate": 0.7,
+      "mean_disrupted_edges": 58.1
+    },
+    {
+      "intervention": "rate_limit",
+      "delay_steps": 0,
+      "results": {
+        "ever_infected": {
+          "mean": 36.9,
+          "stdev": 34.62578119866887
+        },
+        "infected_fraction": {
+          "mean": 0.3075,
+          "stdev": 0.2885481766555739
+        },
+        "peak_infected": {
+          "mean": 11.715,
+          "stdev": 10.508851258528182
+        },
+        "duration": {
+          "mean": 22.625,
+          "stdev": 16.9300771576155
+        }
+      },
+      "relative_change_infected_fraction_percent": -42.33473980309423,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.22575,
+          "stdev": 0.3401893235002566,
+          "approximate_95_percent_ci": [
+            -0.2728978347967219,
+            -0.17860216520327807
+          ]
+        },
+        "peak_infected": {
+          "mean": -15.415,
+          "stdev": 16.868178688326328,
+          "approximate_95_percent_ci": [
+            -17.75281029320926,
+            -13.077189706790737
+          ]
+        },
+        "duration": {
+          "mean": -2.84,
+          "stdev": 16.41314585275838,
+          "approximate_95_percent_ci": [
+            -5.1147459596855045,
+            -0.5652540403144952
+          ]
+        }
+      },
+      "intervention_application_rate": 1,
+      "mean_disrupted_edges": 56
+    },
+    {
+      "intervention": "rate_limit",
+      "delay_steps": 2,
+      "results": {
+        "ever_infected": {
+          "mean": 41.17,
+          "stdev": 33.88468621367173
+        },
+        "infected_fraction": {
+          "mean": 0.34308333333333335,
+          "stdev": 0.2823723851139311
+        },
+        "peak_infected": {
+          "mean": 13.33,
+          "stdev": 10.571180125521991
+        },
+        "duration": {
+          "mean": 24.325,
+          "stdev": 16.392772491245914
+        }
+      },
+      "relative_change_infected_fraction_percent": -35.66182215971245,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.19016666666666668,
+          "stdev": 0.2544066678610245,
+          "approximate_95_percent_ci": [
+            -0.2254256319512931,
+            -0.15490770138204027
+          ]
+        },
+        "peak_infected": {
+          "mean": -13.8,
+          "stdev": 13.687833426791764,
+          "approximate_95_percent_ci": [
+            -15.697036927823927,
+            -11.902963072176075
+          ]
+        },
+        "duration": {
+          "mean": -1.14,
+          "stdev": 11.180133133573236,
+          "approximate_95_percent_ci": [
+            -2.6894873988503356,
+            0.4094873988503358
+          ]
+        }
+      },
+      "intervention_application_rate": 0.895,
+      "mean_disrupted_edges": 50.12
+    },
+    {
+      "intervention": "rate_limit",
+      "delay_steps": 4,
+      "results": {
+        "ever_infected": {
+          "mean": 47.03,
+          "stdev": 35.17378392179159
+        },
+        "infected_fraction": {
+          "mean": 0.3919166666666667,
+          "stdev": 0.2931148660149299
+        },
+        "peak_infected": {
+          "mean": 16.5,
+          "stdev": 12.829770655603197
+        },
+        "duration": {
+          "mean": 25.635,
+          "stdev": 16.014810199582236
+        }
+      },
+      "relative_change_infected_fraction_percent": -26.504141272073756,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.14133333333333334,
+          "stdev": 0.22496174995924,
+          "approximate_95_percent_ci": [
+            -0.17251144119847248,
+            -0.1101552254681942
+          ]
+        },
+        "peak_infected": {
+          "mean": -10.63,
+          "stdev": 12.964315151086208,
+          "approximate_95_percent_ci": [
+            -12.426762410727422,
+            -8.83323758927258
+          ]
+        },
+        "duration": {
+          "mean": 0.17,
+          "stdev": 9.472048273338894,
+          "approximate_95_percent_ci": [
+            -1.1427589148976351,
+            1.482758914897635
+          ]
+        }
+      },
+      "intervention_application_rate": 0.8,
+      "mean_disrupted_edges": 44.8
+    },
+    {
+      "intervention": "rate_limit",
+      "delay_steps": 6,
+      "results": {
+        "ever_infected": {
+          "mean": 53.215,
+          "stdev": 37.23696729955786
+        },
+        "infected_fraction": {
+          "mean": 0.44345833333333334,
+          "stdev": 0.31030806082964885
+        },
+        "peak_infected": {
+          "mean": 20.095,
+          "stdev": 14.892106944493488
+        },
+        "duration": {
+          "mean": 25.92,
+          "stdev": 15.594213589900491
+        }
+      },
+      "relative_change_infected_fraction_percent": -16.83856852633224,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.08979166666666667,
+          "stdev": 0.15955391625251047,
+          "approximate_95_percent_ci": [
+            -0.11190471127148272,
+            -0.06767862206185063
+          ]
+        },
+        "peak_infected": {
+          "mean": -7.035,
+          "stdev": 10.216932196975174,
+          "approximate_95_percent_ci": [
+            -8.450994559723245,
+            -5.619005440276754
+          ]
+        },
+        "duration": {
+          "mean": 0.455,
+          "stdev": 6.292531666497146,
+          "approximate_95_percent_ci": [
+            -0.41710039519339875,
+            1.3271003951933988
+          ]
+        }
+      },
+      "intervention_application_rate": 0.765,
+      "mean_disrupted_edges": 42.84
+    },
+    {
+      "intervention": "rate_limit",
+      "delay_steps": 8,
+      "results": {
+        "ever_infected": {
+          "mean": 56.12,
+          "stdev": 38.382832217610336
+        },
+        "infected_fraction": {
+          "mean": 0.4676666666666667,
+          "stdev": 0.31985693514675284
+        },
+        "peak_infected": {
+          "mean": 22.115,
+          "stdev": 16.25307933715019
+        },
+        "duration": {
+          "mean": 25.915,
+          "stdev": 15.471412281687465
+        }
+      },
+      "relative_change_infected_fraction_percent": -12.298796686982339,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.06558333333333334,
+          "stdev": 0.13591848457817618,
+          "approximate_95_percent_ci": [
+            -0.08442067423156355,
+            -0.04674599243510314
+          ]
+        },
+        "peak_infected": {
+          "mean": -5.015,
+          "stdev": 8.65443651295588,
+          "approximate_95_percent_ci": [
+            -6.214443706149273,
+            -3.815556293850726
+          ]
+        },
+        "duration": {
+          "mean": 0.45,
+          "stdev": 6.0131764864575885,
+          "approximate_95_percent_ci": [
+            -0.3833837425289491,
+            1.2833837425289492
+          ]
+        }
+      },
+      "intervention_application_rate": 0.745,
+      "mean_disrupted_edges": 41.72
+    },
+    {
+      "intervention": "rate_limit",
+      "delay_steps": 10,
+      "results": {
+        "ever_infected": {
+          "mean": 59.73,
+          "stdev": 40.62337248382757
+        },
+        "infected_fraction": {
+          "mean": 0.49775,
+          "stdev": 0.3385281040318964
+        },
+        "peak_infected": {
+          "mean": 24.355,
+          "stdev": 17.629605496146212
+        },
+        "duration": {
+          "mean": 26.045,
+          "stdev": 15.497867416917781
+        }
+      },
+      "relative_change_infected_fraction_percent": -6.6572902015939945,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.035500000000000004,
+          "stdev": 0.08430439251564299,
+          "approximate_95_percent_ci": [
+            -0.047183992695798226,
+            -0.023816007304201782
+          ]
+        },
+        "peak_infected": {
+          "mean": -2.775,
+          "stdev": 6.013750992934869,
+          "approximate_95_percent_ci": [
+            -3.6084633650644298,
+            -1.9415366349355703
+          ]
+        },
+        "duration": {
+          "mean": 0.58,
+          "stdev": 3.6771192569932722,
+          "approximate_95_percent_ci": [
+            0.07037727147708994,
+            1.0896227285229099
+          ]
+        }
+      },
+      "intervention_application_rate": 0.72,
+      "mean_disrupted_edges": 40.32
+    },
+    {
+      "intervention": "rate_limit",
+      "delay_steps": 12,
+      "results": {
+        "ever_infected": {
+          "mean": 61.33,
+          "stdev": 41.279548271845684
+        },
+        "infected_fraction": {
+          "mean": 0.5110833333333333,
+          "stdev": 0.34399623559871406
+        },
+        "peak_infected": {
+          "mean": 25.935,
+          "stdev": 18.084135444468153
+        },
+        "duration": {
+          "mean": 25.36,
+          "stdev": 15.098683759065935
+        }
+      },
+      "relative_change_infected_fraction_percent": -4.156899515549305,
+      "paired_difference": {
+        "infected_fraction": {
+          "mean": -0.02216666666666667,
+          "stdev": 0.06161469583307134,
+          "approximate_95_percent_ci": [
+            -0.030706027838551676,
+            -0.013627305494781666
+          ]
+        },
+        "peak_infected": {
+          "mean": -1.195,
+          "stdev": 4.308105600997582,
+          "approximate_95_percent_ci": [
+            -1.7920729741684949,
+            -0.5979270258315053
+          ]
+        },
+        "duration": {
+          "mean": -0.105,
+          "stdev": 2.7443821100257058,
+          "approximate_95_percent_ci": [
+            -0.48535195523257957,
+            0.2753519552325796
+          ]
+        }
+      },
+      "intervention_application_rate": 0.7,
+      "mean_disrupted_edges": 39.2
+    }
+  ]
+}

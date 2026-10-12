@@ -52,6 +52,7 @@ Degree centrality is a heuristic, not AI. It provides a baseline against which a
 ```bash
 PYTHONPATH=src python3 -m unittest discover -s tests -v
 PYTHONPATH=src python3 -m propagation_sim.experiment --trials 100 --output results/baseline.json
+PYTHONPATH=src python3 -m propagation_sim.delay_experiment --trials 200 --output results/delay_sweep.json
 ```
 
 ## First controlled experiment
@@ -65,6 +66,28 @@ A 200-trial seeded comparison used a 120-node preferential-attachment graph, a t
 | Mean duration | 25.47 steps | 27.07 steps |
 
 The infected fraction changed by -4.50% relative to the baseline. Variance remained high, and the intervention changed the represented node count, so this is a baseline observation rather than evidence of a general containment effect.
+
+## Time-aware containment experiment
+
+The second experiment lets propagation run for a configurable number of steps before applying an intervention. It compares node splitting with quarantine and rate limiting. For split nodes, all virtual replicas are mapped back to the original logical node when outcomes are counted, so the result is not distorted by a larger represented population.
+
+Across 200 paired trials:
+
+| Intervention | Delay | Relative change in infected fraction | Mean disrupted edges |
+| --- | ---: | ---: | ---: |
+| Node splitting | 0 steps | -5.31% | 0 |
+| Node splitting | 2 steps | -3.46% | 0 |
+| Node splitting | 4 steps | +2.14% | 0 |
+| Rate limiting | 0 steps | -42.33% | 56 |
+| Rate limiting | 6 steps | -16.84% | 42.84 |
+| Quarantine | 0 steps | -65.28% | 83 |
+| Quarantine | 6 steps | -30.77% | 63.49 |
+
+The paired mean change in infected fraction for immediate node splitting was -0.0283, with an approximate 95% confidence interval of [-0.0580, +0.0014]. The interval includes zero. Under this configuration, the evidence does not establish that splitting reduces total infection, and its small apparent benefit disappeared after a short delay.
+
+Quarantine and rate limiting produced larger reductions whose paired intervals did not include zero in this sweep, but they removed many connections. That makes the systems trade-off visible: aggressive containment can reduce propagation while also imposing substantial disruption. The next model must attach traffic, availability, and reconfiguration costs to those removed or redistributed connections.
+
+Delay is currently measured in simulation steps rather than wall-clock controller time. Runs in which propagation ended before the scheduled delay correctly record that no intervention was applied.
 
 ## Interpretation boundary
 
